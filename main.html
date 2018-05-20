@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<title>Website Profil Diri</title>    
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- for icon only -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" > <!-- for icon only -->
+    
+<script>
+function openMenu() {
+    document.getElementById("closebtn").style.color="white";
+    document.getElementById("closebtn").hidden=false;
+    document.getElementById("mainmenu").style.width = "260px";
+    document.getElementById("navtitle").hidden=true;
+    document.getElementById("submenu-time").style.display="block";
+}
+
+function closeMenu() {
+    document.getElementById("closebtn").hidden=true;
+    document.getElementById("mainmenu").style.width = "60px";
+    document.getElementById("navtitle").hidden=false;
+    document.getElementById("submenu-time").style.display="none";;
+}
+    
+function closebtn(){
+    document.getElementById("closebtn").hidden=true;
+}
+
+window.onscroll = function() {MenuHiddenBanner()};
+
+function MenuHiddenBanner() {
+    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+        document.getElementById("mainmenu").style.display = "block";
+        document.getElementById("submenu").style.display = "block";
+        document.getElementById("TopButton").style.display = "block";
+    } else {
+        document.getElementById("mainmenu").style.display = "none";
+        document.getElementById("submenu").style.display = "none";
+        document.getElementById("TopButton").style.display = "none";
+    }
+}
+
+window.defaultStatus    
+    </script>
+    <script src="jquery-3.2.1.min.js"></script>
+    <script> //add scroll animation
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+      var hash = this.hash;
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 1000, function(){
+        window.location.hash = hash;
+      });
+    }
+  });
+});
+</script>
+<style>
+    .page{
+        background-color: aqua; 
+    }
+    
+    .header{
+        position:relative;
+        text-align: center;
+        margin: auto;
+    }
+
+    .textcentered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: white;
+        font-family: Arial;
+        font-size-adjust: auto;
+        font-size: 18px;
+        -webkit-font-smoothing: antialiased;
+        padding-bottom: 100px;
+    }
+    
+    .subtextcentered{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-family: ITC Avant Garde Gothic Medium;
+        font-size: 20px;
+        color: azure;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .buttonheader{
+        position: absolute;
+        top: 65%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: inline-block;
+        border-radius: 5px;
+        padding: 20px 40px;
+        background-color: white;
+        color: grey;
+        border: none;
+        font-family: verdana;
+        font-size-adjust: auto;
+        font-size: 20px;
+        -webkit-font-smoothing: antialiased;
+    }
+    
+    .buttonheader:hover{
+        background-color: #c0c1c4;
+        color: white;
+    }
+    
+    .buttonheader:active{
+        background-color:#a4a6a8;
+        color: white;
+    }
+    
+    .navtitle{   
+        transform: rotate(90deg);
+        position: absolute;
+        top: 300px;
+        right: 10px;
+        transition: 3s;
+        cursor:pointer;
+        font-size: 20px;
+        color: white;
+    }
+    
+    .menu{
+        display: none;
+        position: fixed;
+        background-color: dodgerblue;
+        float: left;
+        height: 100%;
+        width: 60px;
+        z-index: 1;
+        top: 0;
+        left: 0; 
+        transition: 0.5s; 
+        cursor: pointer;
+        overflow-x: hidden;
+    }
+    
+    .menu-section{
+        padding-top: 50px;
+    }
+    
+    .menu-section a:hover{
+        color:#b3e0ff;
+    }
+    
+    .submenu-section{
+        padding-top: 42px;
+        padding-left: 20px;
+        align-content: center;
+        font-family: sans-serif;
+        font-size: 22px;
+        color: floralwhite;
+        display: block;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    
+    .menu .close{
+        position: absolute;
+        top: 0;
+        right: 25px;
+        font-size: 36px;
+        margin-left: 50px;
+        text-decoration: none;
+        color: dodgerblue;
+    }
+    
+    .button{
+        padding-left: 70px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    
+    .content{
+        width:100%;
+        height: 80%;
+        background-color:white;
+        padding-top: 20px;
+        position: relative;
+    }
+    
+    .content .profile{
+        padding-left: 100px;
+        color: crimson;
+        padding-top: 30px;
+        margin-bottom: 600px;
+        font-family: ITC Avant Garde Gothic Medium;        
+    }
+    
+    .content .education{
+        padding-left: 100px;
+        color:#33cccc;
+        padding-top: 30px;
+        margin-bottom: 600px;
+        font-family: ITC Avant Garde Gothic Medium;    
+    }
+    
+    .content .experience{
+        padding-left: 100px;
+        color: #00cc99;
+        padding-top: 30px;
+        margin-bottom: -25px;
+        font-family: ITC Avant Garde Gothic Medium;        
+    }
+    
+    .content .galeri{
+        padding-left: 100px;
+        color: blueviolet;
+        padding-top: 30px;
+        margin-bottom: 600px;
+        font-family: ITC Avant Garde Gothic Medium;        
+    }
+    
+    .openmenu{
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        z-index: -1;
+    }
+    
+    .bigmenu{
+        background-color: white;
+        height: 60%;
+        width: 100%;
+        position: relative;
+        height: 400px;
+        padding-left: 0px;
+        font-family: ITC Avant Garde Gothic Medium;
+        color: grey;
+        font-size:20px;
+        text-align: center;
+        margin-bottom: 100px;
+    }
+    
+    .button1{
+        display: inline-block;
+        border-radius: 50%;
+        border:1px solid;
+        border-color: grey;
+        padding: 58px 60px;
+        margin: 30px 60px;
+        text-align: center;
+        position: relative;
+        transition: all. 3s ease-in-out;
+        background-color: white;
+    }
+    
+    .button1:hover{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #b30059;
+        color: white;
+    }
+    
+    .button2{
+        display: inline-block;
+        border-radius: 50%;
+        border:1px solid;
+        border-color: grey;
+        padding: 60px 41px;
+        margin: 30px 60px;
+        text-align: center;
+        position: relative;
+        background-color: white;
+    }
+    
+    .button2:hover{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #33cccc;
+        color: white;
+    }
+    
+    .button3{
+        display: inline-block;
+        border-radius: 50%;
+        border:1px solid;
+        border-color: grey;
+        padding: 60px 36px;
+        margin: 30px 60px;
+        text-align: center;
+        position: relative;
+        background-color: white;
+    }
+    
+    .button3:hover{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: #1affa3;
+        color: white;
+    }
+    
+    .button4{
+        display: inline-block;
+        border-radius: 50%;
+        border:1px solid;
+        border-color: grey;
+        padding: 58px;
+        margin: 30px 60px;
+        text-align: center;
+        position: relative;
+        background-color: white;
+    }
+    
+    .button4:hover{
+        display: inline-block;
+        border-radius: 50%;
+        background-color: blueviolet;
+        color: white;
+    }
+    
+    
+    
+    .captionbutton{
+        margin: 20px 20px;
+        font-family: sans-serif;
+        font-size: 20px;    
+    }
+    
+    .TopButton {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 50px;
+        z-index: 99;
+        border: none;
+        outline: none;
+        background-color: crimson;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 10px;
+    }
+    
+    .profildiri{
+        width: 1100px; 
+        margin-right: 80px;
+    }
+    
+    .profildiri td{
+        color: crimson;
+        font-family: LibreFranklin-Regular;
+        padding-bottom: 10px;
+        padding-left: 30px;
+        border: 0px;
+    }
+    
+    .profildiri img{
+        box-sizing: border-box;
+        border: 1px solid white;
+        height: 375px; 
+        width: 247px;
+        border-radius: 20px;
+    }
+    
+    .line{
+        border-left: 6px solid;
+        color: deepskyblue;
+        height: 500px;
+        margin-left: 125px;
+        position: absolute;
+        font-family: LibreFranklin-Regular;
+    }
+    
+    .history:after{
+        content: '';
+        position: absolute;
+        width: 40px;
+        height: 40px;
+        left: -27px;
+        background-color: white;
+        border: 4px solid deepskyblue;
+        top: -4px;
+        border-radius: 50%;
+    }
+    
+    .history{
+        position: relative;
+        font-size: 28px;
+        top: 40px;
+        margin-bottom: 80px;
+    }
+    
+    .history .edu{
+        margin-left: 60px;
+    }
+    
+    .tabel{
+        margin-left: 150px;
+        color: dodgerblue;    
+        font-family: arial;
+        margin-bottom: 200px;    
+        padding-top: 30px;    
+    }
+    
+    .tabel table, td{
+        text-align: left;
+        border: 2px solid;
+        color: dodgerblue;    
+        border-collapse: collapse;
+    }
+    
+    .tabel th{
+    padding-right: 100px;
+    font-weight: 100;
+    text-align: center;    
+    }
+    
+    .tabel td{
+    padding: 10px;
+    }
+
+    .gallery {
+    border: 1px solid #d1b3ff;
+    padding: 10px;
+    float: left;
+    width: 25%;
+    margin: 10px 20px 10px 40px;
+    position: relative;
+    }
+
+    .gallery:hover {
+    border: 1px solid #8533ff;
+    }
+
+    .gallery img {
+    width: 100%;
+    height: auto;
+    }
+
+    .desc {
+    padding: 15px;
+    text-align: center;
+    }   
+
+* {
+    box-sizing: border-box;
+}
+    
+    .footer{
+        width: 100%;
+        padding-top: 20px;
+        background-color: black;
+        height:130px;
+        float:none;
+        font-family: calibri;
+        font-size: 18px;
+        color: white;
+        position: relative;
+        display: block;
+        
+    }
+    
+    .footer p .link{
+        opacity: 0.8;
+        color: white;
+        text-decoration: none;
+    }
+    
+    .footer p .link:hover{
+        color: dodgerblue;
+    }
+
+    .audio{
+        font-family: arial;
+        font-size: small;
+    }
+    
+    audio{
+        margin-left: 130px;
+        width: 700px;
+        margin-bottom: 20px;
+    }
+    
+    /* this is font only */
+    @font-face {
+         font-family: "ITC Avant Garde Gothic Medium";
+         src: url('font/ITC Avant Garde Gothic Medium.OTF');
+         }
+    @font-face {
+         font-family: "LibreFranklin-Regular";
+         src: url('font/LibreFranklin-Regular.TTF');
+         }
+    @font-face {
+         font-family: "WorkSans-Regular";
+         src: url('font/WorkSans-Regular.OTF');
+         }
+    @font-face {
+         font-family: "Segoe-UI";
+         src: url('font/segoeuisl.TTF');
+         }
+    
+    /* this is font only (end line) */
+    
+</style>    
+</head>
+
+<body>   
+    <div class="header" id="Top">
+        <img src="img/banner.jpg" width="100%" height="100%" style="opacity: 0.8; background-color: rgb (0,0,0)">
+        <div class="textcentered"><h1>WELCOME TO AGUS ILHAM SITE</h1></div><br><div class="subtextcentered">Profile Website About Agus Ilham Pangestu From UNSADA</div>
+        <a href="#Home"><button class="buttonheader">Scroll to Menu</button></a>
+    </div>
+        
+    <div class="menu" id="mainmenu">
+    <a href="javascript:void(0)" class="close" onclick="closeMenu()" onloadstart="closebtn()" id="closebtn">&times;</a>
+        <div id="navtitle" class="navtitle" style="font-family: sans-serif;color: white;"><span onclick="openMenu()">Menu</span></div>    
+        <ul style="list-style-type: none" class="menu-section" id="submenu">
+            <li><a href="#Top" class="submenu-section" id="submenu">Home</a></li>
+            <li><a href="#Profile" class="submenu-section" id="submenu">Profile</a></li>
+            <li><a href="#Education" class="submenu-section" id="submenu">Education</a></li>
+            <li><a href="#matkul" class="submenu-section" id="submenu">Mata Kuliah</a></li>
+            <li><a href="#Experience" class="submenu-section" id="submenu">Experience</a></li>
+            <li><a href="#Gallery" class="submenu-section" id="submenu">Gallery</a></li>
+        </ul>
+    </div>  
+        
+    <div class="content">
+        <div id="Home">
+            <div id="BigMenu" class="bigmenu"><br><p>Silahkan pilih menu yang ada di bawah ini</p><br>
+                    <a href="#Profile"><button class="button1"><i style="font-size:38px" class="fa">&#xf2bc;</i><br><label style="font-size: 24px; padding-top: 8px">Profile</label></button></a>
+                    <a href="#Education"><button class="button2"><i style="font-size:36px" class="fa">&#xf02d;</i><br><label style="font-size: 24px;padding-top: 8px">Education</label></button></a>
+                    <a href="#Experience"><button class="button3"><i style="font-size:36px" class="fa">&#xf0ae;</i><br><label style="font-size: 24px; padding-top: 8px">Experience</label></button></a>
+                    <a href="#Gallery"><button class="button4"><i style="font-size:38px" class="material-icons">&#xe413;</i><br><label style="font-size: 24px; padding-top: 8px">Gallery</label></button><br></a>
+                    
+            </div>
+            </div>
+            <hr style="border-width: 2px; margin: 140px 100px">    
+                <div id="Profile" class="profile"> <i style="font-size:28px" class="fa">&#xf2bc;</i><label style="font-size: 32px; padding-top: 8px">&nbsp;Profile</label>
+                    <hr style="border-width: 1px; margin: 10px 100px 100px 0px">
+                    <table class="profildiri" align="left">
+                        <tr>
+                        <td rowspan="10"><img src="img/fotodiri.jpg"></td>
+                        <td><b>Nama: </b>Agus Ilham Pangestu</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Jenis Kelamin: </b>Laki-laki</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Tempat Lahir : </b>Blora</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Tanggal Lahir: </b>06 Agustus 1998</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Alamat: </b>Cipinang Muara No. 24, Kelurahan Cipinang Muara, Kecamatan Jatinegara, Kota Jakarta Timur, DKI Jakarta, Indonesia</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Hobi/Interest: </b>Transportasi, Piknik/Joyride, Anime   </td>    
+                        </tr>
+                        <tr>
+                        <td><b>Pekerjaan: </b>IT Staff (SEO) di PT. Taharica</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Email: </b>agusilham01@gmail.com</td>    
+                        </tr>
+                        <tr>
+                        <td><b>Kewarganegaraan: </b>Indonesia</td>    
+                        </tr>
+                        <tr></tr>
+                    </table>
+                </div>
+            
+                <div id="Education" class="education"> <i style="font-size:28px" class="fa">&#xf02d;</i><label style="font-size: 32px; padding-top: 8px">&nbsp;Education</label><hr style="border-width: 1px; margin: 10px 80px 100px 0px">
+                    <div class="line">
+                        <div class="history"> <label class="edu">Graduated From Cipinang Muara 16 Pagi Primary School (2010)</label></div>
+                        <div class="history"> <label class="edu">Graduated From Junior High School 52 Jakarta (2013)</label></div>
+                        <div class="history"> <label class="edu">Graduated From Senior High School (vocational) 7 Jakarta (2016)</label></div>
+                        <div class="history"> <label class="edu"><b>Study at Darma Persada University (Now)</b> </label></div>
+                    </div>
+                    <br>    
+                </div>
+        
+                <div class="tabel" id="matkul">
+                        <table border="1" id="tabel"><b>Mata Kuliah Saat Ini</b><br/><br>  
+                        <tr class="th">
+                        <td style="text-align: center">Hari</td>
+                        <td style="text-align: center">Mata Kuliah</td>
+                        <td style="text-align: center">Jam</td>    
+                        </tr>
+                        <tr>
+                        <td rowspan="2">Senin</td>
+                        <td>Kalkulus</td>
+                        <td>17.00 - 18.40</td>
+                        </tr>
+                        <tr>
+                        <td>Aljabar Linear</td>
+                        <td>19.30 - 21.05</td>    
+                        </tr>
+                        <tr>
+                        <td rowspan="2">Selasa</td>
+                        <td>Algoritma Dan Pemrograman</td>
+                        <td>17.00 - 18.40</td>
+                        </tr>
+                        <tr>
+                        <td>Fisika Listrik Magnet & Gelombang</td>
+                        <td>19.30 - 22.00</td>    
+                        </tr>
+                        <tr>
+                        <td rowspan="2">Rabu</td>
+                        <td>Bahasa Indonesia</td>
+                        <td>17.00 - 18.40</td>
+                        </tr>
+                        <tr>
+                        <td>Pemrograman Berbasis Web </td>
+                        <td>19.00 - 21.30</td>    
+                        </tr>
+                        <tr>
+                        <td>Kamis</td>
+                        <td>Bahasa Inggris</td>
+                        <td>17.00 - 18.40</td>
+                        </tr>
+                        <tr>
+                        <td rowspan="2">Jumat</td>
+                        <td>Pengantar Teknologi Informasi</td>
+                        <td>17.00 - 18.40</td>    
+                        </tr>
+                        <tr>
+                        <td>Praktek Algoritma Dan Pemrograman</td>
+                        <td>19.00 - 19.40</td>    
+                        </tr>
+                        </table>
+                    </div>
+        
+                <div id="Experience" class="experience"><i style="font-size:28px" class="fa">&#xf0ae;</i><label style="font-size: 32px; padding-top: 8px">&nbsp;Experience</label><hr style="border-width: 1px; margin: 10px 80px 25px 0px"><img src="img/experience.png" width="100%">
+                </div>
+        
+                <div id="Gallery" class="galeri"><i style="font-size:28px" class="material-icons">&#xe413;</i><label style="font-size: 32px; padding-top: 8px">&nbsp;Gallery</label><hr style="border-width: 1px; margin: 10px 80px 50px 0px">
+                <div class="gallery"><img src="img/gallery1.jpg" alt="image1" width="300px" height="200px"></div>
+                <div class="gallery"><img src="img/gallery2.jpg" alt="image1" width="300px" height="200px"></div>
+                <div class="gallery"><img src="img/gallery3.jpg" alt="image1" width="300px" height="200px"></div>
+                <div class="gallery"><img src="img/gallery4.jpg" alt="image1" width="300px" height="200px"></div>
+                <div class="gallery"><img src="img/gallery5.jpg" alt="image1" width="300px" height="200px"></div>
+                <div class="gallery"><img src="img/gallery6.jpg" alt="image1" width="300px" height="200px"></div>    
+                </div>
+        
+            <p style="margin-left: 140px; font-family: arial; font-size:small; color: blueviolet;"><b> Audio</b><br>
+            AAAA - Our Journey to Epilogue    
+            </p>
+            <p>
+            <audio controls>
+            <source src="audio/backsound.mp3" type="audio/mpeg">    
+            </audio>    
+            </p>
+        </div>
+    <div class="footer"><p align="center">COPYRIGHT &#169;2018 AGUS ILHAM PANGESTU | 2017230004 | Dosen: Herianto</p>
+    
+        <p style="margin-left: 5%; font-size: small;" align="center">Design inspired from <a href="https://goo.gl/umDyWa" class="link" target="_blank">BLEND S</a></p></div>
+    
+            <button class="TopButton" id="TopButton"><a href="#Top"><label class="fa" style="font-size: 28px; color:white;">&#xf139;</label></a></button>
+</body>
+
+
+</html>
